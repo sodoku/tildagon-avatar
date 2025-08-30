@@ -29,7 +29,7 @@ class Avatar(app.App):
     def __init__(self):
         self.notification = None
         self.button_states = Buttons(self)
-        self.name = settings.get("name") or "npentrel"
+        self.name = settings.get("name") or "emfcamp"
         self.image_path = ASSET_PATH + self.name + ".png"
         self.url = "https://github.com/" + self.name + ".png?size=240"
         self.image_exists = False
