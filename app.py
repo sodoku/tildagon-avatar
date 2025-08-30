@@ -15,7 +15,7 @@ if sys.implementation.name == "micropython":
             path = "/apps/" + a
     ASSET_PATH = path + "/assets/"
 else:
-    ASSET_PATH = "apps/avatar/"
+    ASSET_PATH = "apps/avatar/assets/"
 
 
 def file_exists(filename):
