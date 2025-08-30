@@ -31,7 +31,7 @@ class Avatar(app.App):
         self.button_states = Buttons(self)
         self.name = settings.get("name") or "npentrel"
         self.image_path = ASSET_PATH + self.name + ".png"
-        self.url = "https://github.com/" + self.name + ".png"
+        self.url = "https://github.com/" + self.name + ".png?size=240"
         self.image_exists = False
 
     def update(self, delta):
