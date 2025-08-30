@@ -18,6 +18,13 @@ else:
     ASSET_PATH = "apps/avatar/"
 
 
+def file_exists(filename):
+    try:
+        return (os.stat(filename)[0] & 0x4000) == 0
+    except OSError:
+        return False
+
+
 class Avatar(app.App):
     def __init__(self):
         self.notification = None
@@ -28,7 +35,7 @@ class Avatar(app.App):
         self.image_exists = False
 
     def update(self, delta):
-        if os.path.isfile(self.image_path):
+        if file_exists(self.image_path):
             self.image_exists = True
         else:
             self.image_exists = False
